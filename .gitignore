@@ -7,4 +7,5 @@ web/bundles
 web/css
 web/js
 vendor
-bin
+bin/*
+!bin/reload

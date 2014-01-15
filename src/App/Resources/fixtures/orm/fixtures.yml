@@ -1,1 +1,11 @@
-# https://github.com/nelmio/alice#reference
+App\Entity\Cat:
+    cat-shiva:
+        name: Shival
+    cat-thalie:
+        name: Thalie
+    cat-robert:
+        name: Robert
+    cat-mr-snuggles:
+        name: Mister Snuggles
+    cat-tard:
+        name: Tard
