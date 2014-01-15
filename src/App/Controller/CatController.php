@@ -13,10 +13,12 @@ class CatController extends Controller
     {
         $term = $this->getRequest()->get('term');
 
-        $cats = $this->get('fos_elastica.index.kitten.cat')
-            ->search($term)
+        $cats = $this
+            ->get('fos_elastica.manager')
+            ->getRepository('App:Cat')
+            ->findLike($term)
         ;
-        
+
         return [
             'cats' => $cats,
             'term' => $term

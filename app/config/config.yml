@@ -32,6 +32,7 @@ fos_elastica:
                         model: App\Entity\Cat
                         provider: ~
                         listener: ~
+                        finder: ~
 
 # Twig Configuration
 twig:
