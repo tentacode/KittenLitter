@@ -1,0 +1,8 @@
+<div class="navbar-collapse collapse">
+  <form action="{{ path('app_cat_search') }}" method="get" class="navbar-form navbar-right" role="form">
+    <div class="form-group">
+      <input type="text" name="term" placeholder="Search" class="form-control" value="{{ term|default('') }}">
+    </div>
+    <button type="submit" class="btn btn-success">Search teh kitten</button>
+  </form>
+</div>

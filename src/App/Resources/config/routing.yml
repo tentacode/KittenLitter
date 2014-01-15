@@ -1,5 +1,17 @@
 # https://github.com/KnpLabs/geekweek12/wiki/Routing
 
+app_home:
+    pattern: /
+    defaults:
+        _controller: 'App:Cat:index'
+        _resources:
+            "cats": {service: "app.entity.cat_repository", method: "findAll"}
+
+app_cat_search:
+    pattern: /cat/search
+    defaults:
+        _controller: 'App:Cat:search'
+
 'App:Cat':
     defaults:
         _resources:
