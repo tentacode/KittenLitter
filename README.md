@@ -23,6 +23,10 @@ app/console assets:install
 app/console server:run
 ```
 
+## Stuff
+
+[Elastic search](src/App/Resources/doc/elastic.md)
+
 ## About RAD Bundle
 
 Read the [full documentation](http://rad.knplabs.com/).

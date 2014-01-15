@@ -25,7 +25,8 @@
         "doctrine/doctrine-fixtures-bundle": "~2.1@dev",
         "doctrine/data-fixtures": "~1.0@dev",
         "mopa/bootstrap-bundle": "v3.0.0-beta3",
-        "twbs/bootstrap": "v3.0.0"
+        "twbs/bootstrap": "v3.0.0",
+        "friendsofsymfony/elastica-bundle": "3.0.*@dev"
     },
     "require-dev": {
         "behat/behat": "~3@dev",

@@ -17,6 +17,21 @@ framework:
     trusted_proxies: ~
     session:         ~
 
+fos_elastica:
+    clients:
+        default: { host: localhost, port: 9200 }
+    indexes:
+        kitten:
+            client: default
+            types:
+                cat:
+                    mappings:
+                        name: { boost: 5 }
+                    persistence:
+                        driver: orm
+                        model: App\Entity\Cat
+                        provider: ~
+
 # Twig Configuration
 twig:
     debug:            %kernel.debug%
