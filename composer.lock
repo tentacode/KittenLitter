@@ -3,7 +3,7 @@
         "This file locks the dependencies of your project to a known state",
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file"
     ],
-    "hash": "aa27dbcd7b3863cc79c9d706ef1eb82d",
+    "hash": "833f84033facd491807593d579d8686a",
     "packages": [
         {
             "name": "doctrine/annotations",
@@ -1027,40 +1027,43 @@
         },
         {
             "name": "mopa/bootstrap-bundle",
-            "version": "2.3.x-dev",
+            "version": "v3.0.0-beta3",
             "target-dir": "Mopa/Bundle/BootstrapBundle",
             "source": {
                 "type": "git",
                 "url": "https://github.com/phiamo/MopaBootstrapBundle.git",
-                "reference": "ae77c07dbed6dc8428cf03f044925950e6850214"
+                "reference": "94f0628a0abff3bed46ebc640137a9f0d6bb0cff"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phiamo/MopaBootstrapBundle/zipball/ae77c07dbed6dc8428cf03f044925950e6850214",
-                "reference": "ae77c07dbed6dc8428cf03f044925950e6850214",
+                "url": "https://api.github.com/repos/phiamo/MopaBootstrapBundle/zipball/94f0628a0abff3bed46ebc640137a9f0d6bb0cff",
+                "reference": "94f0628a0abff3bed46ebc640137a9f0d6bb0cff",
                 "shasum": ""
             },
             "require": {
-                "mopa/composer-bridge": "1.3.*",
-                "symfony/symfony": "~2.3-dev"
+                "mopa/composer-bridge": "~1.3",
+                "symfony/console": "~2.3",
+                "symfony/form": "~2.3",
+                "symfony/framework-bundle": "~2.3",
+                "symfony/twig-bundle": "~2.3"
             },
             "suggest": {
-                "craue/formflow-bundle": "dev-master",
+                "craue/formflow-bundle": "~2.0",
                 "jlong/sass-twitter-bootstrap": "dev-master",
-                "knplabs/knp-menu-bundle": "2.0.*",
-                "knplabs/knp-paginator-bundle": "dev-master",
+                "knplabs/knp-menu-bundle": "~2.0@dev",
+                "knplabs/knp-paginator-bundle": "~2.3",
                 "mopa/bootstrap-sandbox-bundle": "~2.3",
-                "twbs/bootstrap": "2.*"
+                "twbs/bootstrap": ">2.0,<4.0-dev"
             },
             "type": "symfony-bundle",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "2.3.x-dev"
+                    "dev-master": "3.x-dev"
                 }
             },
             "autoload": {
                 "psr-0": {
-                    "Mopa\\Bundle\\BootstrapBundle": ""
+                    "Mopa\\Bundle\\BootstrapBundle\\": ""
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -1086,7 +1089,7 @@
                 "form",
                 "template"
             ],
-            "time": "2013-11-28 08:19:42"
+            "time": "2013-10-25 11:56:03"
         },
         {
             "name": "mopa/composer-bridge",
@@ -1664,6 +1667,43 @@
                 "framework"
             ],
             "time": "2014-01-05 02:12:11"
+        },
+        {
+            "name": "twbs/bootstrap",
+            "version": "v3.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/twbs/bootstrap.git",
+                "reference": "e8a1df5f060bf7e6631554648e0abde150aedbe4"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/twbs/bootstrap/zipball/e8a1df5f060bf7e6631554648e0abde150aedbe4",
+                "reference": "e8a1df5f060bf7e6631554648e0abde150aedbe4",
+                "shasum": ""
+            },
+            "type": "library",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "Apache-2.0"
+            ],
+            "authors": [
+                {
+                    "name": "sugeng tigefa",
+                    "email": "tigefa@gmail.com"
+                },
+                {
+                    "name": "Jacob Thornton",
+                    "email": "jacobthornton@gmail.com"
+                }
+            ],
+            "description": "Sleek, intuitive, and powerful mobile first front-end framework for faster and easier web development.",
+            "homepage": "http://getbootstrap.com",
+            "keywords": [
+                "bootstrap",
+                "css"
+            ],
+            "time": "2013-08-19 21:18:20"
         },
         {
             "name": "twig/extensions",
@@ -2374,7 +2414,7 @@
     "stability-flags": {
         "doctrine/doctrine-fixtures-bundle": 20,
         "doctrine/data-fixtures": 20,
-        "mopa/bootstrap-bundle": 20,
+        "mopa/bootstrap-bundle": 10,
         "behat/behat": 20,
         "behat/mink-extension": 20,
         "phpspec/phpspec": 20

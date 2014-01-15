@@ -1,0 +1,21 @@
+{% extends 'App::layout.html.twig' %}
+
+{% block content %}
+<div class="row">
+    <div class="col-md-12">
+        <div class="row">
+        {% for cat in cats %}
+            <div class="col-md-4">
+                <div class="thumbnail">
+                  <img src="http://placekitten.com/360/200" alt="{{ cat.name }}">
+                  <div class="caption">
+                    <h3>{{ cat.name }}</h3>
+                    <p>Meow, meow, meow !</p>
+                  </div>
+                </div>
+            </div>
+        {% endfor %}
+        </div>
+    </div>
+</div>
+{% endblock content %}

@@ -1,11 +1,23 @@
-{#
-    Choose base layout:
+{% extends 'KnpRadBundle:Layout:h5bp.html.twig' %}
 
-        - {% extends 'KnpRadBundle:Layout:h5bp.html.twig' %} - HTML5Boilerplate
-        - {% extends 'KnpRadBundle:Layout:tb.html.twig' %} - Twitter Bootstrap
+{% block stylesheets %}
+    <link rel="stylesheet" href="{{ asset('bundles/app/bootstrap/css/bootstrap.min.css') }}" />
+    <link rel="stylesheet" href="{{ asset('bundles/knprad/bootstrap/css/bootstrap-responsive.min.css') }}" />
+{% endblock %}
 
-    This template is only a configuration layer.
-    Use `src/App/Resources/layout.html.twig` as your
-    app-related layout.
-#}
-{% extends 'KnpRadBundle:Layout:tb.html.twig' %}
+{% block javascripts %}
+    <script src="{{ asset('bundles/knprad/common/js/jquery-1.8.2.min.js') }}"></script>
+    <script src="{{ asset('bundles/app/bootstrap/js/bootstrap.min.js') }}"></script>
+{% endblock %}
+
+{% block flashes %}
+    {% flashes %}
+        <div class="alert alert-{{ type }}">
+            <button type="button" class="close" data-dismiss="alert">&times;</button>
+            {{ message }}
+        </div>
+    {% endflashes %}
+{% endblock %}
+
+{% block body %}
+{% endblock %}

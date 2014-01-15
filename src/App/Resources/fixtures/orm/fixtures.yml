@@ -1,6 +1,6 @@
 App\Entity\Cat:
     cat-shiva:
-        name: Shival
+        name: Shiva
     cat-thalie:
         name: Thalie
     cat-robert:
