@@ -1,11 +1,4 @@
 App\Entity\Cat:
-    cat-shiva:
-        name: Shiva
-    cat-thalie:
-        name: Thalie
-    cat-robert:
-        name: Robert
-    cat-mr-snuggles:
-        name: Mister Snuggles
-    cat-tard:
-        name: Tard
+    cat{1..100}:
+        gender: <gender()>
+        name: <catName($gender)> <catName($gender)>

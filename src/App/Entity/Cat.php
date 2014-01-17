@@ -25,6 +25,13 @@ class Cat
      */
     private $name;
 
+    /**
+     * @ORM\Column(type="string")
+     * @Assert\NotBlank
+     * @Assert\Choice(choices={"Male", "Female"})
+     */
+    private $gender;
+
     public function getId()
     {
         return $this->id;
