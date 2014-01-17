@@ -24,7 +24,8 @@
         "symfony/assetic-bundle": "~2.3",
         "doctrine/doctrine-fixtures-bundle": "~2.1@dev",
         "doctrine/data-fixtures": "~1.0@dev",
-        "friendsofsymfony/elastica-bundle": "3.0.*@dev"
+        "friendsofsymfony/elastica-bundle": "3.0.*@dev",
+        "knplabs/knp-paginator-bundle": "dev-master"
     },
     "require-dev": {
         "behat/behat": "~3@dev",
