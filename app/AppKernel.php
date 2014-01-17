@@ -16,7 +16,6 @@ class AppKernel extends Kernel
             new Symfony\Bundle\AsseticBundle\AsseticBundle(),
             new Doctrine\Bundle\DoctrineBundle\DoctrineBundle(),
             new Doctrine\Bundle\FixturesBundle\DoctrineFixturesBundle(),
-            new Mopa\Bundle\BootstrapBundle\MopaBootstrapBundle(),
             new Knp\RadBundle\KnpRadBundle(),
             new FOS\ElasticaBundle\FOSElasticaBundle(),
             new App\App(),
