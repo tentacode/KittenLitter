@@ -13,7 +13,7 @@ class CatRepository extends Repository
     {
         $query = new Query();
         
-        if (isset($filer['term'])) {
+        if (isset($filter['term'])) {
             $qs = new QueryString();
             $qs->setQuery($filter['term']);
             $query->setQuery($qs);
