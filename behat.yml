@@ -10,13 +10,13 @@ default:
             path: %paths.base%/features
             contexts:
                 - Context\FeatureContext
-                - Context\CatContext
                 - Behat\MinkExtension\Context\MinkContext
+                - Context\CatContext
     extensions:
         Behat\MinkExtension\Extension:
-            base_url:    'http://localhost:8080/app_test.php'
+            base_url:    'http://kitten.dev/app_test.php'
             selenium2:   ~
             default_session: selenium2
             javascript_session: selenium2
             show_auto: true
-            show_cmd: chrome %s
+            show_cmd: 'open -a "Google Chrome" %s'
