@@ -10,8 +10,8 @@ class SearchController extends Controller
     public function searchAction(Request $request)
     {
         $form = $this->getForm();
-        if ($request->getMethod() == 'POST') {
-            $form->handleRequest($request);
+        if ($request->query->has('form')) {
+            $form->bind($request->query->get('form'));
         } else {
             $form->submit(['term' => $request->get('term')]);
         }
@@ -21,11 +21,18 @@ class SearchController extends Controller
         $cats = $this
             ->get('fos_elastica.manager')
             ->getRepository('App:Cat')
-            ->findLike($searchFilter)
+            ->findLikeForPaginator($searchFilter)
         ;
 
+        $paginator  = $this->get('knp_paginator');
+        $pagination = $paginator->paginate(
+            $cats,
+            $request->query->get('page', 1),
+            9
+        );
+
         return [
-            'cats' => $cats,
+            'cats' => $pagination,
             'searchFilter' => $searchFilter,
             'form' => $form->createView()
         ];

@@ -9,7 +9,7 @@ use Elastica\Filter\Term;
 
 class CatRepository extends Repository
 {
-    public function findLike($filter)
+    public function findLikeForPaginator($filter)
     {
         $query = new Query();
         
@@ -25,6 +25,6 @@ class CatRepository extends Repository
             $query->setFilter($gender);
         }
 
-        return $this->find($query);
+        return $this->createPaginatorAdapter($query);
     }
 }

@@ -2,9 +2,4 @@
 
 {% block content %}
     {{ include('App:Cat:_cat_list.html.twig') }}
-
-    <div class="col-md-12">
-        {{ knp_pagination_render(cats) }}
-        <p>There's as much as {{ cats.totalItemCount }} cats</p>
-    </div>
 {% endblock content %}
