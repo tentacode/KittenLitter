@@ -48,4 +48,16 @@ class Cat
     {
         return $this->name;
     }
+
+    public function setGender($gender)
+    {
+        $this->gender = $gender;
+
+        return $this;
+    }
+
+    public function getGender()
+    {
+        return $this->gender;
+    }
 }
