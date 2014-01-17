@@ -1,0 +1,27 @@
+{% extends 'App::layout.html.twig' %}
+
+{% block quick_search %}{% endblock %}
+
+{% block jumbo_content %}
+    <p>Hello, is it me you're looking for ?</p>
+
+    <form action="{{ path('app_search') }}" method="post" class="form-inline" role="form">
+        <div class="form-group">
+            {{ form_widget(form.term) }}
+        </div>
+        <div class="form-group">
+            {{ form_widget(form.gender) }}
+        </div>
+        {{ form_rest(form) }}
+        <button type="submit" class="btn btn-default">Search</button>
+    </form>
+{% endblock %}
+
+{% block content %}
+    {% if cats|length %}
+        <div class="col-md-12">
+            <p>We found {{ cats|length }} kitty.</p>
+        </div>
+    {% endif %}
+    {{ include('App:Cat:_cat_list.html.twig') }}
+{% endblock content %}

@@ -8,7 +8,7 @@ fos_elastica:
                 cat:
                     mappings:
                         name: { boost: 5 }
-                        gender: { index: 'no', include_in_all: false }
+                        gender: { include_in_all: false }
                     persistence:
                         driver: orm
                         model: App\Entity\Cat

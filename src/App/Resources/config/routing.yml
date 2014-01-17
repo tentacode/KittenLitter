@@ -7,10 +7,10 @@ app_home:
         _resources:
             "cats": {service: "app.entity.cat_repository", method: "findAll"}
 
-app_cat_search:
-    pattern: /cat/search
+app_search:
+    pattern: /search
     defaults:
-        _controller: 'App:Cat:search'
+        _controller: 'App:Search:search'
 
 'App:Cat':
     defaults:

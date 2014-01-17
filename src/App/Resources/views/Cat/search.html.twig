@@ -1,9 +1,0 @@
-{% extends 'App::layout.html.twig' %}
-
-{% block jumbo_content %}
-    <p>Hello, is it <b>{{ term|default('nothing') }}</b> you're looking for ?</p>
-{% endblock %}
-
-{% block content %}
-    {{ include('App:Cat:_cat_list.html.twig') }}
-{% endblock content %}

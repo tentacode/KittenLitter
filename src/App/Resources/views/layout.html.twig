@@ -23,7 +23,9 @@
           </button>
           <a class="navbar-brand" href="{{ path('app_home') }}">Kitten Litter</a>
         </div>
-        {{ include('App:Layout:_search.html.twig') }}
+        {% block quick_search %}
+          {{ include('App:Search:_quick_search.html.twig') }}
+        {% endblock %}
       </div>
     </div>
 
