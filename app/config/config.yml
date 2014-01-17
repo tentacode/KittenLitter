@@ -1,6 +1,7 @@
 imports:
     - { resource: parameters.yml }
     - { resource: security.yml }
+    - { resource: elastica_config.yml }
 
 framework:
     #esi:             ~
@@ -16,23 +17,6 @@ framework:
     default_locale:  %locale%
     trusted_proxies: ~
     session:         ~
-
-fos_elastica:
-    clients:
-        default: { host: localhost, port: 9200 }
-    indexes:
-        kitten:
-            client: default
-            types:
-                cat:
-                    mappings:
-                        name: { boost: 5 }
-                    persistence:
-                        driver: orm
-                        model: App\Entity\Cat
-                        provider: ~
-                        listener: ~
-                        finder: ~
 
 # Twig Configuration
 twig:
