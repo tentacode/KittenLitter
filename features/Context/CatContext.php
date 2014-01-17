@@ -11,9 +11,10 @@ use Behat\Behat\Tester\Exception\PendingException;
 class CatContext extends RawMinkContext implements ContextInterface, TurnipAcceptingContext
 {
     /**
-     * @Given I should see :visibleCatNumber cats out of :totalCatNumber total cats
+     * @Then I should see :visibleCatNumber cats
+     * @Then I should see :visibleCatNumber cats out of :totalCatNumber total cats
      */
-    public function iShouldSeeCatsOutOfTotalCats($visibleCatNumber, $totalCatNumber)
+    public function iShouldSeeCatsOutOfTotalCats($visibleCatNumber, $totalCatNumber = null)
     {
         $cats = $this->getListedCats();
         if (sizeof($cats) != $visibleCatNumber) {
@@ -24,7 +25,9 @@ class CatContext extends RawMinkContext implements ContextInterface, TurnipAccep
             ), $this->getSession());
         }
 
-        $this->assertTotalCats($totalCatNumber);
+        if ($totalCatNumber !== null) {
+            $this->assertTotalCats($totalCatNumber);
+        }
     }
 
     protected function getListedCats()

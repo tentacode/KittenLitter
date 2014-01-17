@@ -12,6 +12,7 @@ default:
                 - Context\FeatureContext
                 - Behat\MinkExtension\Context\MinkContext
                 - Context\CatContext
+                - Context\SearchContext
     extensions:
         Behat\MinkExtension\Extension:
             base_url:    'http://kitten.dev/app_test.php'
