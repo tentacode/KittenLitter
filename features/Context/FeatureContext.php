@@ -32,7 +32,7 @@ class FeatureContext extends RawMinkContext implements ContextInterface, TurnipA
     }
 
     /**
-     * @BeforeScenario
+     * @BeforeScenario @Alice
      */
     public function loadAliceData()
     {

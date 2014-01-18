@@ -29,10 +29,15 @@ class SearchContext extends RawMinkContext implements ContextInterface, TurnipAc
 
     /**
      * @When I search for cats that are :gender
+     * @When I search for cats that are :gender and named :name
      */
-    public function iSearchForCatsThatAre($gender)
+    public function iSearchForCatsThatAre($gender, $name = null)
     {
         $this->getSession()->getPage()->selectFieldOption('form_gender', $gender);
+        if ($name !== null) {
+            $this->getSession()->getPage()->fillField('Search', $name);
+        }
+
         $this->getSession()->getPage()->pressButton('Search');
     }
 

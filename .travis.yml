@@ -14,4 +14,4 @@ before_script:
 
 script:
     - bin/phpspec run -fpretty --verbose
-    - bin/behat --no-snippets --verbose
+    - bin/behat --no-snippets --verbose --strict
