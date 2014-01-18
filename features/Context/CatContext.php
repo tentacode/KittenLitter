@@ -12,7 +12,7 @@ class CatContext extends RawMinkContext implements ContextInterface, TurnipAccep
 {
     /**
      * @Then I should see :visibleCatNumber cats
-     * @Then I should see :visibleCatNumber cats out of :totalCatNumber total cats
+     * @Then I should see :visibleCatNumber cats out of :totalCatNumber
      */
     public function iShouldSeeCatsOutOfTotalCats($visibleCatNumber, $totalCatNumber = null)
     {

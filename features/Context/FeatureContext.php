@@ -11,9 +11,9 @@ use AppKernel;
 class FeatureContext extends RawMinkContext implements ContextInterface, TurnipAcceptingContext
 {
     /**
-     * @BeforeSuite
+     * @BeforeScenario
      */
-    public static function  purge()
+    public function purge()
     {
         $app = new AppKernel('test', true);
         $app->boot();
@@ -24,9 +24,17 @@ class FeatureContext extends RawMinkContext implements ContextInterface, TurnipA
     }
 
     /**
-     * @BeforeSuite
+     * @BeforeScenario
      */
-    public static function loadAliceData()
+    public function resetSearchIndex()
+    {
+        exec('app/console fos:elastica:reset --env=test');
+    }
+
+    /**
+     * @BeforeScenario
+     */
+    public function loadAliceData()
     {
         exec('app/console doctrine:fixtures:load --env=test --no-interaction');
     }
