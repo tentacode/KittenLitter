@@ -1,10 +1,18 @@
 default:
+    formatters:
+        pretty:
+            paths: false
     autoload:
-        '': %paths.base%/features/Context
+        '': %paths.base%/app
+        'Context': %paths.base%/features
     suites:
         default:
             path: %paths.base%/features
-            contexts: [FeatureContext, Behat\MinkExtension\Context\MinkContext]
+            contexts:
+                - Context\FeatureContext
+                - Context\CatContext
+                - Context\SearchContext
+                - Behat\MinkExtension\Context\MinkContext
     extensions:
         Behat\MinkExtension\Extension:
             base_url:    'http://localhost:8080/app_test.php'

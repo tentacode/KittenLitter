@@ -1,6 +1,14 @@
 imports:
     - { resource: config_dev.yml }
 
+fos_elastica:
+    clients:
+        default: { host: localhost, port: 9250 }
+
+doctrine:
+    dbal:
+        dbname:   %database_name%_test
+
 framework:
     test: ~
     session:
