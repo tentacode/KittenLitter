@@ -14,7 +14,6 @@ git clone git@github.com:tentacode/KittenLitter.git
 cd KittentLitter
 composer.phar install
 bin/reload
-app/console assets:install
 ```
 
 ## Run
