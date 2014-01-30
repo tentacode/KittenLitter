@@ -6,7 +6,7 @@ before_script:
     - tar -zxvf elasticsearch-0.90.10.tar.gz
     - ./elasticsearch-0.90.10/bin/elasticsearch -Des.config=./elasticsearch.yml
     - cp app/config/parameters.yml.dist app/config/parameters.yml
-    - composer install --dev -v --prefer-dist
+    - composer install --dev -v --prefer-source
     - app/console doctrine:database:create -e=test
     - app/console doctrine:schema:create -e=test --no-interaction
     - phantomjs --webdriver=4444 > /dev/null 2>&1 &
