@@ -13,7 +13,7 @@ class Cat extends Base
     ];
 
     protected static $femaleCatNames = [
-        'Sassy','Misty','Missy','Princess','Samatha','Kitty','Puss','Fluffy','Molly','Daisy','Ginger','Midnight','Precious','Maggie','Lucy','Cleo','Whiskers','Chloe','Sophie','Lily','Coco','Boo','Callie','Sadie','Jessie','Jasmine','Nala','Snowball','Angel','Muffin','Pumpkin','Pepper','Baby','Zoe','Peaches','Holly','Dusty','Katie','Sasha','Scooter'
+        'Sassy','Misty','Missy','Princess','Samantha','Kitty','Puss','Fluffy','Molly','Daisy','Ginger','Midnight','Precious','Maggie','Lucy','Cleo','Whiskers','Chloe','Sophie','Lily','Coco','Boo','Callie','Sadie','Jessie','Jasmine','Nala','Snowball','Angel','Muffin','Pumpkin','Pepper','Baby','Zoe','Peaches','Holly','Dusty','Katie','Sasha','Scooter'
     ];
 
     public function gender()
