@@ -44,11 +44,7 @@ assetic:
 doctrine:
     dbal:
         driver:   %database_driver%
-        host:     %database_host%
-        port:     %database_port%
-        dbname:   %database_name%
-        user:     %database_user%
-        password: %database_password%
+        path:     %database_path%
         charset:  UTF8
         # if using pdo_sqlite as your database driver, add the path in parameters.yml
         # e.g. database_path: %kernel.root_dir%/data/data.db3
@@ -59,11 +55,3 @@ doctrine:
         auto_mapping: true
         naming_strategy: doctrine.orm.naming_strategy.underscore
         default_repository_class: Knp\RadBundle\Doctrine\EntityRepository
-
-# Swiftmailer Configuration
-swiftmailer:
-    transport: %mailer_transport%
-    host:      %mailer_host%
-    username:  %mailer_user%
-    password:  %mailer_password%
-    spool:     { type: memory }

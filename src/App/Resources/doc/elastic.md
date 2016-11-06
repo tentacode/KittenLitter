@@ -5,17 +5,17 @@
 Get Elastic:
 
 ```
-brew install elastic
+brew install elasticsearch
 ```
 
 Launch it:
 
 ```
-elastic
+elasticsearch
 ```
 
 Populate:
 
 ```
-php app/console fos:elastica:populate
+bin/reload
 ```

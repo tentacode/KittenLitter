@@ -5,7 +5,10 @@ This is where I put all my cat crap.
 
 ## Prerequisites
 
-* PHP 5.4
+* PHP 5.4 >
+* PHP intl
+* PHP pdo_sqlite
+* elasticsearch
 
 ## Setup
 
