@@ -1,0 +1,6 @@
+App\Entity\Message:
+    message{1..3540}:
+        sender: '@cat*'
+        date: <messageDate(@self)>
+        picture: <messagePicture(@self)>
+        body: <messageBody(@self)>

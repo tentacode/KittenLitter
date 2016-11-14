@@ -1,4 +1,0 @@
-App\Entity\Cat:
-    cat{1..100}:
-        gender: <gender()>
-        name: <catName($gender)> <catName($gender)>

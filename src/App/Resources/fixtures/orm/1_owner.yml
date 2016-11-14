@@ -1,0 +1,7 @@
+App\Entity\Owner:
+    owner{1..2048}:
+        gender: <humanGender()>
+        email: <email()>
+        password: <password()>
+        birthdate: <dateTimeBetween('-65 year', '-16 year')>
+        registrationDate: <dateTimeBetween('-6 month', '-1 day')>

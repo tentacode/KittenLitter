@@ -3,7 +3,7 @@ app/*\.cache
 app/SymfonyRequirements.php
 app/cache
 app/logs
-database/*.db3
+database/*.db3-*
 web/bundles
 web/css
 web/js

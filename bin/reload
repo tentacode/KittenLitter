@@ -6,4 +6,4 @@ fi
 app/console doctrine:database:drop --force --env=$1
 app/console doctrine:database:create --env=$1 &&
 app/console doctrine:schema:create --env=$1 &&
-app/console doctrine:fixtures:load --no-interaction --env=$1
+app/console doctrine:fixtures:load --multiple-transactions --no-interaction --env=$1 -v

@@ -1,0 +1,3 @@
+App\Entity\Friend:
+    friend{1..1024}:
+        __construct: [<friendOptions(@cat*)>]
