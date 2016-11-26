@@ -1,5 +1,5 @@
 language: php
-php:      5.4
+php:      7
 
 before_script:
     - wget https://download.elasticsearch.org/elasticsearch/elasticsearch/elasticsearch-0.90.10.tar.gz

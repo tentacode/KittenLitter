@@ -1,0 +1,12 @@
+App\Entity\Cat:
+    cat{1..2048}:
+        gender: <gender()>
+        name: <catName($gender)> <catName($gender)>
+        birthdate: <dateTimeBetween('-12 year', '-3 month')>
+        owner: '@owner<current()>'
+    # some owners may have more cats
+    cat{2049..3201}:
+        gender: <gender()>
+        name: <catName($gender)> <catName($gender)>
+        birthdate: <dateTimeBetween('-15 year', '-6 year')>
+        owner: '@owner*'

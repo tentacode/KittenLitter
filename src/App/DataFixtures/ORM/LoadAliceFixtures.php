@@ -3,7 +3,7 @@
 namespace App\DataFixtures\ORM;
 
 use Knp\RadBundle\DataFixtures\ORM\LoadAliceFixtures as BaseLoadAliceFixtures;
-use App\Faker\Provider\Cat as CatProvider;
+use App\Faker\Provider\CatProvider;
 use Faker\Generator;
 
 class LoadAliceFixtures extends BaseLoadAliceFixtures
@@ -16,7 +16,7 @@ class LoadAliceFixtures extends BaseLoadAliceFixtures
         $fakerGenerator->seed(self::SEED);
 
         return array(
-            'providers' => array($this, new CatProvider($fakerGenerator)),
+            'providers' => array($this, new CatProvider($fakerGenerator, $this->container)),
             'seed' => self::SEED
         );
     }

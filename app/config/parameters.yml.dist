@@ -1,15 +1,8 @@
 parameters:
-    database_driver:   pdo_mysql
-    database_host:     localhost
-    database_port:     ~
-    database_name:     kitten_litter
+    database_driver:   pdo_sqlite
+    database_path:     %kernel.root_dir%/../database/kitten.db3
     database_user:     root
     database_password: ~
 
-    mailer_transport:  ~
-    mailer_host:       ~
-    mailer_user:       ~
-    mailer_password:   ~
-
     locale:            en
-    secret:            ThisTokenIsNotSoSecretChangeIt
+    secret:            Lolcats

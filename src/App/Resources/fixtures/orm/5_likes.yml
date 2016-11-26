@@ -1,0 +1,6 @@
+App\Entity\Like:
+    like{1..6473}:
+        message: '@message*'
+        sender: '@cat*'
+        date: <likeDate(@self)>
+        emoji: <emoji()>
